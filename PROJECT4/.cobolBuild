@@ -89,8 +89,10 @@
 	<mffilelist type="srcfile" id="cobol_file_set_1" srcdir="${basedir}">
 		<file name="CONVERT.cbl"/>
 		<file name="UPDATE.cbl"/>
-		<file name="REPORT.cbl"/>
 		<file name="CONTROL.cbl"/>
+		<file name="REORDER.cbl"/>
+		<file name="INVENTORY.cbl"/>
+		<file name="CALCULAT.cbl"/>
 	</mffilelist>
 	<!-- COBOL copybook locations -->
 	<mffilelist id="cobol.copybook.locations">
@@ -112,14 +114,26 @@
 			<mfdirlist refid="cobol_directive_set_1"/>
 		</cobol>
 	</target>
-	<target name="FileCompile.New_Configuration.REPORT.cbl">
-		<cobol debug="true" analysisData="${analysisData}" threadCount="${buildThreadCount}" threadedRts="true" analysisDataDir="${analysisDataDir}" useDirectiveSet="${useDirectiveSet}" srcfile="REPORT.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="true" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" connectionName="${connectionName}" projectName="${projectName}" desttype="obj">
+	<target name="FileCompile.New_Configuration.CONTROL.cbl">
+		<cobol debug="true" analysisData="${analysisData}" threadCount="${buildThreadCount}" threadedRts="true" analysisDataDir="${analysisDataDir}" useDirectiveSet="${useDirectiveSet}" srcfile="CONTROL.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="true" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" connectionName="${connectionName}" projectName="${projectName}" desttype="obj">
 			<mffilelist refid="cobol.copybook.locations"/>
 			<mfdirlist refid="cobol_directive_set_1"/>
 		</cobol>
 	</target>
-	<target name="FileCompile.New_Configuration.CONTROL.cbl">
-		<cobol debug="true" analysisData="${analysisData}" threadCount="${buildThreadCount}" threadedRts="true" analysisDataDir="${analysisDataDir}" useDirectiveSet="${useDirectiveSet}" srcfile="CONTROL.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="true" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" connectionName="${connectionName}" projectName="${projectName}" desttype="obj">
+	<target name="FileCompile.New_Configuration.REORDER.cbl">
+		<cobol debug="true" analysisData="${analysisData}" threadCount="${buildThreadCount}" threadedRts="true" analysisDataDir="${analysisDataDir}" useDirectiveSet="${useDirectiveSet}" srcfile="REORDER.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="true" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" connectionName="${connectionName}" projectName="${projectName}" desttype="obj">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+		</cobol>
+	</target>
+	<target name="FileCompile.New_Configuration.INVENTORY.cbl">
+		<cobol debug="true" analysisData="${analysisData}" threadCount="${buildThreadCount}" threadedRts="true" analysisDataDir="${analysisDataDir}" useDirectiveSet="${useDirectiveSet}" srcfile="INVENTORY.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="true" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" connectionName="${connectionName}" projectName="${projectName}" desttype="obj">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+		</cobol>
+	</target>
+	<target name="FileCompile.New_Configuration.CALCULAT.cbl">
+		<cobol debug="true" analysisData="${analysisData}" threadCount="${buildThreadCount}" threadedRts="true" analysisDataDir="${analysisDataDir}" useDirectiveSet="${useDirectiveSet}" srcfile="CALCULAT.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="true" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" connectionName="${connectionName}" projectName="${projectName}" desttype="obj">
 			<mffilelist refid="cobol.copybook.locations"/>
 			<mfdirlist refid="cobol_directive_set_1"/>
 		</cobol>
@@ -131,8 +145,10 @@
 	<mffilelist id="cobol.default.object.files.New Configuration" srcdir="${basedir}/New_Configuration.bin" type="objfile">
 		<file name="CONVERT${objext}"/>
 		<file name="UPDATE${objext}"/>
-		<file name="REPORT${objext}"/>
 		<file name="CONTROL${objext}"/>
+		<file name="REORDER${objext}"/>
+		<file name="INVENTORY${objext}"/>
+		<file name="CALCULAT${objext}"/>
 	</mffilelist>
 	<!--  *************************  -->
 	<!--  * Configuration targets *  -->

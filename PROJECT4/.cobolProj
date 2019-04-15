@@ -134,8 +134,10 @@
       <filetype type="cobol" xsi:type="cobolFileContainer">
          <file compile="true" path="CONVERT.cbl" xsi:type="cobolFile"/>
          <file compile="true" path="UPDATE.cbl" xsi:type="cobolFile"/>
-         <file compile="true" path="REPORT.cbl" xsi:type="cobolFile"/>
          <file compile="true" path="CONTROL.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="REORDER.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="INVENTORY.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="CALCULAT.cbl" xsi:type="cobolFile"/>
       </filetype>
       <filetype type="cobol.copybook" xsi:type="cobolFileContainer"/>
    </files>

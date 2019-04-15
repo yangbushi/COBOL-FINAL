@@ -6,15 +6,16 @@
        
       *==============================================================
       * The top level of the project
-      * call 3 sub programs to 
+      * call 4 sub programs to 
       * 1. convert files to indexed files
       * 2. update invent file according to transactions
-      * 3. generate report files
+      * 3. generate inventory report and re-order report
       *==============================================================
        100-CREATE-REPORTS.
            CALL ".\CONVERT".
            CALL ".\UPDATE".
-           CALL ".\REPORT".
+           CALL ".\INVENTORY".
+           CALL ".\REORDER".
 
            STOP RUN.
 

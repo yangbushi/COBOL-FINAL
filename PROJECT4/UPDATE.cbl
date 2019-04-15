@@ -51,9 +51,9 @@
       *==============================================================
        PROCEDURE DIVISION.
        100-UP-INV-FILE.
-           200-INIT-UP-INV-FILE.
-           201-UPDATE-INV-RECORD.
-           202-TERM-UP-INV-FILE.
+           PERFORM 200-INIT-UP-INV-FILE.
+           PERFORM 201-UPDATE-INV-RECORD.
+           PERFORM 202-TERM-UP-INV-FILE.
            
            EXIT PROGRAM.
 
@@ -61,8 +61,8 @@
       * Initiate updating inventory file.
       *==============================================================
        200-INIT-UP-INV-FILE.
-           300-OPEN-INV-FILE.
-           301-PROMPT-TRANS-ENTRY.
+           PERFORM 300-OPEN-INV-FILE.
+           PERFORM 301-PROMPT-TRANS-ENTRY.
                                                                         
       *==============================================================   
       * Update an inventory record.
@@ -76,8 +76,14 @@
                PERFORM 305-CAL-RECEIPT-AMOUT.
            IF STATUS-FIELD = "OK"
                PERFORM 306-REWRITE-TRANS-AMOUT.
-           301-PROMPT-TRANS-ENTRY.
+           PERFORM 301-PROMPT-TRANS-ENTRY.
 
+      *==============================================================
+      * Close the indexed inventory file.
+      *============================================================== 
+       202-TERM-UP-INV-FILE.
+           CLOSE INVENT-FILE.
+      
       *==============================================================
       * Open the indexed inventory file.
       *==============================================================
