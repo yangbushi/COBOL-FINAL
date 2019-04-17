@@ -11,8 +11,9 @@
       * 2. update invent file according to transactions
       * 3. generate inventory report and re-order report
       *==============================================================
-       100-CREATE-REPORTS.
-           CALL ".\CONVERT".
+      * 100-CREATE-REPORTS.
+       BEGIN.
+      *     CALL ".\CONVERT".
            CALL ".\UPDATE".
            CALL ".\INVENTORY".
            CALL ".\REORDER".

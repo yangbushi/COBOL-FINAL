@@ -12,7 +12,7 @@
                RECORD KEY IS PART-NUMBER
                FILE STATUS IS STATUS-FIELD.
            SELECT SEQ-INVENT
-               ASSIGN TO "D:\COBOL\INVFIL3.TXT"
+               ASSIGN TO "D:\COBOL\INVFILE3.TXT"
                ORGANIZATION IS LINE SEQUENTIAL.
            SELECT SUPPLIER-FILE
                ASSIGN TO "D:\COBOL\SUPPLIERI.TXT"
@@ -60,15 +60,16 @@
       * The top level of the program.
       *==============================================================
        PROCEDURE DIVISION.
-       100-CREATE-IND-FILES.
+       BEGIN.
+      * 100-CREATE-IND-FILES.
+           DISPLAY 'UPDATE0'.
            PERFORM 200-INIT-CREATE-IND.
            PERFORM 201-CREATE-IND-INV
                UNTIL EOF-INVENT = "Y".
            PERFORM 202-CREATE-IND-SUP
                UNTIL EOF-SUPPLI = "Y".
            PERFORM 203-TERM-CREATE-IND.
-           
-           EXIT PROGRAM.
+           EXIT PROGRAM. 
 
        200-INIT-CREATE-IND.
            PERFORM 300-OPEN-FILES.

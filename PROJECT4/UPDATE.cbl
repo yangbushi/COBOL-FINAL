@@ -1,5 +1,5 @@
        IDENTIFICATION DIVISION.
-       PROGRAM-ID. UPDATE as "UPDATE".
+       PROGRAM-ID. UPDATEINV as "UPDATEINV".
        AUTHOR.     George Yang.
 
        ENVIRONMENT DIVISION.
@@ -50,12 +50,12 @@
       * The top level of the program.
       *==============================================================
        PROCEDURE DIVISION.
-       100-UP-INV-FILE.
+       BEGIN.
+      * 100-UP-INV-FILE.
+           DISPLAY 'UPDATE'.
            PERFORM 200-INIT-UP-INV-FILE.
            PERFORM 201-UPDATE-INV-RECORD.
            PERFORM 202-TERM-UP-INV-FILE.
-           
-           EXIT PROGRAM.
 
       *==============================================================
       * Initiate updating inventory file.
@@ -140,4 +140,4 @@
                INVALID KEY     MOVE "ER" TO STATUS-FIELD
                NOT INVALID KEY MOVE "OK" TO STATUS-FIELD.
        
-       end program UPDATE.
+       end program UPDATEINV.
