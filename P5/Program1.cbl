@@ -1,3 +1,6 @@
+      *==============================================================
+      * Main program.
+      *============================================================== 
        IDENTIFICATION DIVISION.
        PROGRAM-ID. CONTROL as "CONTROL".
        AUTHOR.     George Yang.
@@ -19,6 +22,9 @@
 
            STOP RUN.
 
+      *==============================================================
+      * Sub program to convert sequential files to indexed files.
+      *============================================================== 
        IDENTIFICATION DIVISION.
        PROGRAM-ID. CONVERT.
        AUTHOR.     George Yang.
@@ -157,6 +163,10 @@
            
        end program CONVERT.
 
+      *==============================================================
+      * Sub program to update indexed inventory file
+      * according to transactions.
+      *============================================================== 
        IDENTIFICATION DIVISION.
        PROGRAM-ID. UPDATEINV.
        AUTHOR.     George Yang.
@@ -307,6 +317,9 @@
        
        end program UPDATEINV.
 
+      *==============================================================
+      * Sub program to generate inventory report.
+      *============================================================== 
        IDENTIFICATION DIVISION.
        PROGRAM-ID. INVENTORY.
        AUTHOR.     Xiaoyang Miao.
@@ -482,6 +495,9 @@
 
        END PROGRAM INVENTORY.
 
+      *==============================================================
+      * Sub program to calculate stock value.
+      *============================================================== 
        IDENTIFICATION DIVISION.
        PROGRAM-ID. CALCULAT.
        AUTHOR.    Xiaoyang Miao.
@@ -498,6 +514,9 @@
             
        END PROGRAM  CALCULAT.
        
+      *==============================================================
+      * Sub program to generate reorder report.
+      *============================================================== 
        IDENTIFICATION DIVISION.
        PROGRAM-ID. REORDER.
        AUTHOR.     FANG.
